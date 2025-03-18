@@ -1,0 +1,55 @@
+:root {
+    --bg: linear-gradient(to top, #010329, #000005);
+    --glassClr: linear-gradient(to left, #142544, #1a9092);
+    --waterClr: linear-gradient(to left, #142544, #1b6d6e);
+}
+
+body {
+    background-image: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Preahvihear", sans-serif;
+}
+
+.profile {
+    position: absolute;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-info {
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.profile-info a {
+    text-decoration: none;
+    color: #cdbdbd;
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.profile-info a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #cdbdbd;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.profile-info a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
